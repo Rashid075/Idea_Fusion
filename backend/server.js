@@ -12,6 +12,13 @@ dotenv.config();
 
 const app = express();
 
+
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+
+// Route to handle all other requests and send the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+});
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
