@@ -17,6 +17,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
+app.get('/', (req, res) => {
+  return res.json({
+    success: true,
+    message: "Welcome to the Idea Sharing App API"
+  })
+})
+
 
 // Routes
 app.use("/api/auth", authRoutes);
