@@ -25,7 +25,7 @@ const SearchIdeas = () => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/ideas?page=${page}&limit=${limit}`, {
+        const response = await axios.get(`https://idea-fusion-61pe.onrender.com/api/ideas?page=${page}&limit=${limit}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

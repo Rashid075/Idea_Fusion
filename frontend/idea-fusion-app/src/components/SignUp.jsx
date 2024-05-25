@@ -19,7 +19,7 @@ const SignUp = () => {
     try {
       // Sign up the user
       await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://idea-fusion-61pe.onrender.com/api/auth/signup",
         {
           Name: name,
           Email: email,
@@ -36,7 +36,7 @@ const SignUp = () => {
 
       // Automatically log the user in after sign up
       const loginResponse = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://idea-fusion-61pe.onrender.com/api/auth/login",
         {
           Email: email,
           Password: password,

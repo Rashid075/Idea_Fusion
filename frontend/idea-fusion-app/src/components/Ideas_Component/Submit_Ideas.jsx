@@ -22,7 +22,7 @@ const Submit_Ideas = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:5000/api/ideas", {
+      const response = await axios.post("https://idea-fusion-61pe.onrender.com/api/ideas", {
         title: title,
         domain: domain,
         technologies: tech,
