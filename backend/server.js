@@ -15,7 +15,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+
+let corsOptions = {
+  origin: ["https://idea-fusion-git-main-rashids-projects-31657ec3.vercel.app/"],
+  methods: "GET, POST, PUT, DELETE, PATCH",
+  credentials: true,
+};
+app.use("*", cors(corsOptions));
 
 app.get('/', (req, res) => {
   return res.json({
