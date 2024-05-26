@@ -45,7 +45,7 @@ const SearchIdeas = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `http://localhost:5000/api/ideas/${id}/like`,
+        `https://idea-fusion-61pe.onrender.com/api/ideas/${id}/like`,
         {},
         {
           headers: {
@@ -69,7 +69,7 @@ const SearchIdeas = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `http://localhost:5000/api/ideas/${id}/dislike`,
+        `https://idea-fusion-61pe.onrender.com/api/ideas/${id}/dislike`,
         {},
         {
           headers: {
