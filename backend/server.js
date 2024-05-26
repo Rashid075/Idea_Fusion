@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 let corsOptions = {
-  origin: ["https://idea-fusion-5t4mp1j4l-rashids-projects-31657ec3.vercel.app/"],
+  origin: ["https://idea-fusion-wine.vercel.app/"],
   methods: "GET, POST, PUT, DELETE, PATCH",
   credentials: true,
 };
