@@ -17,7 +17,7 @@ const Login = () => {
     try {
       const storedToken = localStorage.getItem("token");
       const response = await axios.post(
-        "https://idea-fusion-61pe.onrender.com/api/auth/login",
+        "http://localhost:5000/api/auth/login",
         {
           Email: email,
           Password: password,

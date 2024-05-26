@@ -23,7 +23,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://idea-fusion-61pe.onrender.com/api/auth/logout");
+      await axios.post("http://localhost:5000/api/auth/logout");
       localStorage.removeItem("token");
       toast.success("Logged out successfully");
       navigate("/login");

@@ -14,14 +14,15 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
-let corsOptions = {
-  origin: "https://idea-fusion-wine.vercel.app", // Remove trailing slash
-  methods: "GET,POST,PUT,DELETE,PATCH",
-  credentials: true,
-};
+// let corsOptions = {
+//   origin: "https://idea-fusion-wine.vercel.app", // Remove trailing slash
+//   methods: "GET,POST,PUT,DELETE,PATCH",
+//   credentials: true,
+// };
 
-app.use(cors(corsOptions)); // Correct usage of CORS middleware
+// app.use(cors(corsOptions)); // Correct usage of CORS middleware
 
 app.get('/', (req, res) => {
   return res.json({

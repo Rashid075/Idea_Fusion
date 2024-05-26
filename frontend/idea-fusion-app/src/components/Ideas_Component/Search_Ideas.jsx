@@ -25,7 +25,7 @@ const SearchIdeas = () => {
       }
 
       try {
-        const response = await axios.get(`https://idea-fusion-61pe.onrender.com/api/ideas?page=${page}&limit=${limit}`, {
+        const response = await axios.get(`http://localhost:5000/api/ideas?page=${page}&limit=${limit}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -45,7 +45,7 @@ const SearchIdeas = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `https://idea-fusion-61pe.onrender.com/api/ideas/${id}/like`,
+        `http://localhost:5000/api/ideas/${id}/like`,
         {},
         {
           headers: {
@@ -69,7 +69,7 @@ const SearchIdeas = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `https://idea-fusion-61pe.onrender.com/api/ideas/${id}/dislike`,
+        `http://localhost:5000/api/ideas/${id}/dislike`,
         {},
         {
           headers: {

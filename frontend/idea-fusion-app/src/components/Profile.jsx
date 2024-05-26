@@ -17,7 +17,7 @@ const Profile = () => {
       }
 
       try {
-        const response = await axios.get('https://idea-fusion-61pe.onrender.com/api/auth/profile', {
+        const response = await axios.get('http://localhost:5000/api/auth/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -43,7 +43,7 @@ const Profile = () => {
     }
 
     try {
-      const response = await axios.put('https://idea-fusion-61pe.onrender.com/api/auth/profile', {
+      const response = await axios.put('http://localhost:5000/api/auth/profile', {
         linkedin,
         github,
       }, {
